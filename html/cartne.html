@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet" />
+    <link
+      href="https://img.cdn.vncdn.io/cdn-pos/f8f19b-53936/store/20190718_dMIPi931p7zUMwwzEZleqdMk.png"
+      rel="icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Giỏ hàng</title>
+  </head>
+  <body>
+    <div class="titleheader">
+      <h4 style="padding-top: 5px">Welcome to my world</h4>
+    </div>
+    <header>
+      <div class="header_top">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              style="max-width: 200px"
+              alt="Logo"
+              src="https://img.cdn.vncdn.io/cdn-pos/f8f19b-53936/store/20190718_dMIPi931p7zUMwwzEZleqdMk.png"
+          /></a>
+        </div>
+        <div class="nav_menu">
+          <div class="dropdown">
+            <a class="dropbtn">SNEAKER1</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Option 1</a></li>
+              <li><a href="#">Option 2</a></li>
+              <li><a href="#">Option 3</a></li>
+              <li><a href="#">Option 4</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn">SNEAKER2</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Option 1</a></li>
+              <li><a href="#">Option 2</a></li>
+              <li><a href="#">Option 3</a></li>
+              <li><a href="#">Option 4</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn">SNEAKER3</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Option 1</a></li>
+              <li><a href="#">Option 2</a></li>
+              <li><a href="#">Option 3</a></li>
+              <li><a href="#">Option 4</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn">US</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Option 1</a></li>
+              <li><a href="#">Option 2</a></li>
+              <li><a href="#">Option 3</a></li>
+              <li><a href="#">Option 4</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="search" id="change">
+          <input type="text" class="searchtext" />
+          <i
+            class="fa-solid fa-magnifying-glass"
+            style="position: relative; left: -20px; font-size: 13px"
+          ></i>
+          <i
+            class="fa-solid fa-cart-shopping"
+            style="position: relative; left: -15px; font-size: 13px"
+          ></i>
+          <i
+            class="fa-solid fa-user"
+            style="font-size: 15px; padding-right: 5px"
+          ></i>
+          <a
+            href="signupsignin.html"
+            style="color: #1939bc; text-decoration: none; font-size: 20px"
+            id="changeIndex"
+            >Đăng nhập/Đăng ký</a
+          >
+          <span id="logOutButton"></span>
+        </div>
+      </div>
+      <div class="logoCartwindow">
+        <a href="cart.html" class="logoCart" target="_blank"
+          ><i class="fa-solid fa-cart-shopping" style="color: #005eff"></i
+        ></a>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Giỏ hàng</h1>
+      <div class="divTable">
+        <table border="1" id="tableCart" class="tableCart">
+          <!-- <tr>
+          <td>ID</td>
+          <td>Ảnh</td>
+          <td>Tên</td>
+          <td>Số lượng</td>
+          <td>Giá</td>
+          <td>Thành tiền</td>
+        </tr>
+        <tr>
+          <td colspan="5">Tổng tiền</td>
+          <td id="total"></td>
+        </tr> -->
+        </table>
+        <table border="1" class="tableCart">
+          <tr class="tr1">
+            <td colspan="5" class="td1" style="font-size: 50px">Tổng tiền</td>
+            <td id="total" class="td1" style="font-size: 50px"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Thông tin thanh toán</h2>
+        </div>
+        <div class="modal-body">
+          <table id="modalUser">
+            <tr>
+              <td class="modaltd"><label for="">Tên người nhận:</label></td>
+              <td class="modaltd">
+                <input type="text" id="nguoinhan" required />
+              </td>
+            </tr>
+            <tr>
+              <td class="modaltd"><label for="">Địa chỉ người nhận:</label></td>
+              <td class="modaltd">
+                <input type="text" id="diachi" required />
+              </td>
+            </tr>
+            <tr>
+              <td class="modaltd"><label for="">Số điện thoại:</label></td>
+              <td class="modaltd"><input type="text" id="sdt" required /></td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button class="btnCancel">Đóng</button>
+          <button class="btnPay" onclick="userpay()">Thanh toán</button>
+        </div>
+      </div>
+    </div>
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Về chúng tôi</h3>
+          <a href="index.html">
+            <img
+              style="max-width: 200px; border-radius: 5px"
+              alt="Logo"
+              src="https://img.cdn.vncdn.io/cdn-pos/f8f19b-53936/store/20190718_dMIPi931p7zUMwwzEZleqdMk.png"
+          /></a>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            quas magni pariatur est accusantium voluptas enim nemo facilis sit
+            debitis.
+          </p>
+        </div>
+        <div class="box">
+          <h3>Địa chỉ</h3>
+          <a href="#">Cầu Giấy</a>
+          <a href="#">Hoàng Mai</a>
+          <a href="#">Hoàn Kiếm</a>
+        </div>
+        <div class="box">
+          <h3>Trang</h3>
+          <a href="index.html">Trang chủ</a>
+          <a href="#">Liên hệ</a>
+        </div>
+        <div class="box">
+          <h3>Theo dõi chúng tôi</h3>
+          <a href="https://www.facebook.com/duowngm/">Facebook</a>
+          <a href="https://www.instagram.com/_duowngm/">Instagram</a>
+          <a href="https://open.spotify.com/playlist/11wal3WaF0hYK4H8lcSnFx"
+            >Spotify</a
+          >
+          <a href="index.html">
+            <img
+              style="max-width: 500px; border-radius: 5px"
+              alt="Logo"
+              src="https://img.cdn.vncdn.io/cdn-pos/f8f19b-53936/store/20190718_dMIPi931p7zUMwwzEZleqdMk.png"
+          /></a>
+        </div>
+      </div>
+      <h1 class="credit">
+        <span> Mallow DuowngM </span> | All Rights Reserved!
+      </h1>
+    </section>
+    <script>
+      let listUser = JSON.parse(localStorage.getItem("listUser"));
+      for (let i = 0; i < listUser.length; i++) {
+        let flaguser = localStorage.getItem("flaguser");
+        document.getElementById("changeIndex").innerHTML = `Hi, ${flaguser}`;
+        document.getElementById(
+          "logOutButton"
+        ).innerHTML = `<button class="logOutInd" onclick="logout()">Đăng xuất</button>`;
+        document
+          .getElementById("changeIndex")
+          .addEventListener("click", function (event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ a
+            this.disabled = true; // Thiết lập thuộc tính disabled của thẻ a là true
+          });
+      }
+      function logout() {
+        flag = 0;
+        localStorage.removeItem("flag");
+        localStorage.removeItem("flaguser");
+        window.location.href = "index.html";
+      }
+      const VND = new Intl.NumberFormat("vi-VN", {
+        style: "currency",
+        currency: "VND",
+      });
+      function renderCart() {
+        let productCart = JSON.parse(localStorage.getItem("listProductCart"));
+        if (productCart == null) {
+          productCart = [];
+        }
+        // else
+        // {
+        //   productCart = productCart.filter((item) => item.username == username);
+        // }
+        let result = `
+                <tr class="tr1">
+                      <td class="td1">STT</td>
+                      <td class="td1">Ảnh</td>
+                      <td class="td1">Tên</td>
+                      <td class="td1">Số lượng</td>
+                      <td class="td1">Giá</td>
+                      <td class="td1">Thành tiền</td>
+                      <td class="td1" colspan="2">Tính năng</td>
+                </tr>
+              `;
+        let total = 0;
+        for (let i = 0; i < productCart.length; i++) {
+          let flaguser = localStorage.getItem("flaguser");
+
+          if (productCart[i].username == flaguser) {
+            // let subTotal = productCart[i].soluong * productCart[i].gia;
+            let subTotal =
+              productCart[i].soluong *
+              parseInt(productCart[i].gia.replace(/\./g, ""));
+            // parseInt(productCart[i].gia.replace(/\./g, ""));
+            total += subTotal;
+            result += `
+            <tr class="tr1">
+              <td class="td1">${productCart[i].ID}</td>
+              <td class="td1"><img src="${productCart[i].img}" alt="${productCart[i].ten}" width="100px" height="100px" /></td>
+              <td class="td1">${productCart[i].ten}</td>
+              <td class="td1">
+                <button class="btnQuantity" onclick="minus(${i})"> <i class="fa-solid fa-minus"></i></button>
+                ${productCart[i].soluong}
+                <button class="btnQuantity" onclick="plus(${i})"><i class="fa-solid fa-plus"></i></button>
+              </td>
+              <td class="td1">${productCart[i].gia} VNĐ</td>
+              <td class="td1">${subTotal} VNĐ </td>
+              <td class="td1"><button class="xoaButton" onclick="deleteButton(${i})">Xóa</button></td>
+            </tr>
+          `;
+          }
+        }
+        let resultMoney = VND.format(total);
+        document.getElementById("tableCart").innerHTML = result;
+        document.getElementById(
+          "total"
+        ).innerHTML = `${resultMoney} VNĐ <button class="xoaButton" onclick="pay()">Thanh toán</button>`;
+        localStorage.setItem("totalMoney", resultMoney);
+      }
+
+      renderCart();
+
+      function plus(index) {
+        console.log("111");
+        let productCart = JSON.parse(localStorage.getItem("listProductCart"));
+        productCart[index].soluong++;
+        localStorage.setItem("listProductCart", JSON.stringify(productCart));
+        renderCart();
+      }
+
+      function minus(index) {
+        let productCart = JSON.parse(localStorage.getItem("listProductCart"));
+        if (productCart[index].soluong > 0) {
+          productCart[index].soluong--;
+          if (productCart[index].soluong === 0) {
+            let confirm1 = confirm("Bạn có muốn xóa sản phẩm này?");
+            if (confirm1) {
+              productCart.splice(index, 1);
+              localStorage.setItem(
+                "listProductCart",
+                JSON.stringify(productCart)
+              );
+              renderCart();
+            } else {
+              return;
+            }
+          }
+        }
+        localStorage.setItem("listProductCart", JSON.stringify(productCart));
+        renderCart();
+      }
+      function deleteButton(index) {
+        let productCart = JSON.parse(localStorage.getItem("listProductCart"));
+        productCart.splice(index, 1);
+        localStorage.setItem("listProductCart", JSON.stringify(productCart));
+        // localStorage.setItem("purchaseCount", "0");
+        let numberCart = JSON.parse(localStorage.getItem("numberCart"));
+        numberCart--;
+        localStorage.setItem("numberCart", JSON.stringify(numberCart));
+        renderCart();
+      }
+      function pay() {
+        // Hiển thị modal
+        document.getElementById("myModal").style.display = "block";
+
+        // Đóng modal khi người dùng bấm vào nút đóng hoặc nút hủy
+        let btnCancel = document.getElementsByClassName("btnCancel")[0];
+        let close = document.getElementsByClassName("close")[0];
+
+        btnCancel.onclick = function () {
+          document.getElementById("myModal").style.display = "none";
+        };
+
+        close.onclick = function () {
+          document.getElementById("myModal").style.display = "none";
+        };
+      }
+
+      function userpay() {
+        let toUser = document.getElementById("nguoinhan").value;
+        let address = document.getElementById("diachi").value;
+        let phonenumber = document.getElementById("sdt").value;
+        let receive = JSON.parse(localStorage.getItem("receive"));
+        let flaguser = localStorage.getItem("flaguser");
+        let resultMoney = localStorage.getItem("totalMoney");
+        let listProductCart = localStorage.getItem("listProductCart");
+        let purchaseCount =
+          parseInt(localStorage.getItem("purchaseCount")) || 0;
+        purchaseCount++;
+        localStorage.setItem("purchaseCount", purchaseCount);
+
+        const orderId = `ORD-${("000" + purchaseCount).slice(-3)}`;
+        let infoReceive = {
+          ID: orderId,
+          email: flaguser,
+          tennguoinhan: toUser,
+          diachi: address,
+          sdt: phonenumber,
+          money: resultMoney,
+        };
+        if (receive == null) {
+          receive = [];
+          receive.push(infoReceive);
+          localStorage.setItem("receive", JSON.stringify(receive));
+        } else {
+          receive.push(infoReceive);
+          localStorage.setItem("receive", JSON.stringify(receive));
+        }
+        let cartItems = JSON.parse(localStorage.getItem("listProductCart"));
+        for (let i = 0; i < cartItems.length; i++) {
+          cartItems[i].orderId = orderId;
+        }
+        localStorage.setItem("listProductCart", JSON.stringify(cartItems));
+        alert("Thanh toan thanh cong")
+      }
+    </script>
+    <script src="../js/all.js"></script>
+  </body>
+</html>

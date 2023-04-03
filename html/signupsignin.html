@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to MahLow</title>
+    <link
+      href="https://img.cdn.vncdn.io/cdn-pos/f8f19b-53936/store/20190718_dMIPi931p7zUMwwzEZleqdMk.png"
+      rel="icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="slide navbar style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style1.css" />
+  </head>
+  <body>
+    <div
+      class="toast"
+      id="toast-body"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    ></div>
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true" />
+      <div class="signup">
+        <form onsubmit="signUpButton(event)">
+          <label for="chk" aria-hidden="true">
+            <img
+              style="max-width: 200px; border-radius: 20px"
+              alt="Logo"
+              src="https://img.cdn.vncdn.io/cdn-pos/f8f19b-53936/store/20190718_dMIPi931p7zUMwwzEZleqdMk.png"
+            />
+          </label>
+          <input
+            type="text"
+            name="txt"
+            placeholder="User name"
+            required=""
+            id="username"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required=""
+            id="email"
+          />
+          <input
+            type="password"
+            name="pswd"
+            placeholder="Password"
+            required=""
+            id="password"
+          />
+          <button type="submit" value="submit">Sign up</button>
+        </form>
+      </div>
+
+      <div class="login">
+        <form onsubmit="signInButton(event)">
+          <label for="chk" aria-hidden="true">Login</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required=""
+            id="userEmail"
+          />
+          <input
+            type="password"
+            name="pswd"
+            placeholder="Password"
+            required=""
+            id="userPassword"
+          />
+          <p
+            style="
+              text-align: center;
+              font-family: 'Times New Roman', Times, serif;
+            "
+            id="result"
+          ></p>
+          <div id="snackbar">Đăng ký thành công!</div>
+          <button value="submit" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+    <script src="../js/all.js"></script>
+  </body>
+</html>

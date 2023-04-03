@@ -1,0 +1,486 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Futura Std";
+}
+:root {
+  --main-color: #1939bc;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky !important;
+  z-index: 100000;
+  background-color: #fff;
+  top: 0;
+}
+.titleheader {
+  background-color: #1939bc;
+  text-align: center;
+  width: 100%;
+  height: 36px;
+  color: #fff;
+  margin: 0 auto;
+  font-size: 20px;
+}
+.header_top {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  color: #1939bc;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18.2px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  padding: 20px;
+  line-height: 70px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #1939bc;
+  font-style: bold;
+  letter-spacing: 2px;
+  font-weight: 500px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 10px;
+  transition: all 0.5s ease;
+  list-style: none;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  width: 200px;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: #1939bc;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+.searchtext {
+  background-color: #ffffff;
+  color: #1939bc;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #1939bc;
+}
+.nav_menu {
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+section {
+  width: 100%;
+  height: fit-content;
+  margin-top: -30px;
+}
+
+.logOutInd {
+  color: #1939bc;
+  background-color: #fff;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #1939bc;
+  font-weight: 800;
+  margin-left: 20px;
+}
+.element {
+  width: 20%;
+  text-align: center;
+  margin-bottom: 10vh;
+  padding: 30px;
+  color: white;
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border: 2px solid var(--main-color);
+  transition: transform 0.3s ease-out;
+}
+.element:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.element img {
+  width: 273.75px;
+  height: 273.75px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.element span {
+  font-size: 25px;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.element p {
+  font-size: 25px;
+  color: var(--main-color);
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid black;
+  margin-top: 50px;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+.addCart {
+  color: #fff;
+  font-size: 20px;
+  height: max-content;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid var(--main-color);
+  cursor: pointer;
+  font-weight: 800;
+}
+.element .addCart:hover {
+  cursor: pointer;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #fff;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.logoCart {
+  font-size: 40px;
+}
+.logoCartwindow {
+  position: absolute;
+  left: 93%;
+  bottom: 10%;
+  display: flex;
+}
+.nameproduct {
+  font-weight: 800;
+}
+.price {
+  font-weight: 800;
+  display: block;
+  padding-bottom: 50px;
+}
+h1 {
+  color: var(--main-color);
+  font-size: xxx-large;
+  width: 100%;
+  text-align: center;
+  border-bottom: 3px solid var(--main-color);
+}
+
+.tableCart {
+  text-align: center;
+  border-collapse: collapse;
+  width: 90%;
+  height: 200px;
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0 auto;
+}
+.tr1:nth-child(odd) {
+  background: #f3c2ff;
+  background: -moz-linear-gradient(left, #f3c2ff 0%, #cbcbcb 57%, #2bb1ff 100%);
+  background: -webkit-linear-gradient(
+    left,
+    #f3c2ff 0%,
+    #cbcbcb 57%,
+    #2bb1ff 100%
+  );
+  background: linear-gradient(to right, #f3c2ff 0%, #cbcbcb 57%, #2bb1ff 100%);
+}
+
+.tr1:nth-child(even) {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.td1 {
+  border: 1px solid black;
+  padding: 15px;
+  margin: 0 auto;
+  width: 10%;
+}
+.tr1 {
+  border: 1px solid black;
+  padding: 15px;
+  margin: 0 auto;
+  width: 10%;
+}
+.container {
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 5%;
+}
+.divTable {
+  padding-top: 50px;
+  width: 100%;
+}
+.xoaButton {
+  width: 100%;
+  padding: 10px;
+  color: #1939bc;
+  font-weight: 800;
+  background-color: #fff;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  font-size: 20px;
+}
+.xoaButton:hover {
+  background-color: #1939bc;
+  color: #fff;
+  cursor: pointer;
+}
+.btnQuantity {
+  padding: 10px;
+  color: #1939bc;
+  font-weight: 800;
+  background-color: #fff;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--main-color);
+  display: block;
+  border-radius: 100%;
+}
+.numberCart {
+  position: relative;
+  top: -20px;
+  left: 6px;
+  font-size: 20px;
+  color: var(--main-color);
+}
+.footer {
+  background: var(--main-color);
+  width: 100%;
+}
+
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footer .box-container .box {
+  padding: 1rem 0;
+  flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.5rem;
+  padding: 0.7rem 0;
+  color: #fff;
+}
+
+.footer .box-container .box p {
+  font-size: 1.5rem;
+  padding: 0.7rem 0;
+  color: #eee;
+}
+
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.7rem 0;
+  color: #eee;
+}
+
+.footer .box-container .box a:hover {
+  color: lightpink;
+  text-decoration: underline;
+}
+
+.footer .credit {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+
+.footer .credit span {
+  color: #fff;
+}
+.box_img {
+  overflow: hidden;
+}
+.hehee {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.intro {
+  width: 40%;
+  border: 5px solid var(--main-color);
+  border-radius: 10px;
+  padding: 50px;
+  -webkit-box-shadow: -14px 5px 31px 4px #cf6cd2;
+  box-shadow: -14px 5px 31px 4px #cf6cd2;
+  text-align: justify;
+  word-spacing: 5px;
+}
+.logohere {
+  display: block;
+  margin-top: 150px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.modal-header h2 {
+  margin-top: 0;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-footer {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.btnCancel {
+  background-color: #ccc;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.btnPay {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btnPay:hover {
+  background-color: #3e8e41;
+}
+.modaltd {
+  padding-bottom: 20px;
+}
+.card-body {
+  border-top: 2px solid var(--main-color);
+}
+.snk {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 20px;
+}
+.nav-item {
+  list-style: none;
+}
+.snackbar {
+  position: fixed;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #1939bc;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 30px;
+  border: 2px solid #1939bc;
+}
+
+@media only screen and (max-width: 767px) {
+  .hehee {
+    display: grid;
+    grid-template-columns: 400px;
+  }
+  .intro {
+    width: 95vw;
+    font-size: 1.5rem;
+  }
+  .logohere {
+    margin: -3px 0 10px 0;
+  }
+}
